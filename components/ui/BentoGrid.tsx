@@ -1,8 +1,13 @@
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+// import Lottie from "lottie-react";
+// import LottieConfetti from "./LottieConfetti";
+import dynamic from "next/dynamic";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+const LottieConfetti = dynamic(() => import("./LottieConfetti"), {
+  ssr: false,
+});
 
 import { cn } from "@/lib/utils";
 
@@ -10,6 +15,9 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+// import dynamic from "next/dynamic";
+
+// const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -181,7 +189,19 @@ export const BentoGridItem = ({
                 }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* <Lottie
+                  animationData={animationData}
+                  loop={copied}
+                  autoplay={copied}
+                  style={{ height: 200, width: 400 }}
+                /> */}
+                {/* <LottieConfetti copied={copied} /> */}
+
+                {copied && (
+                  <div className="absolute -bottom-5 right-0">
+                    <LottieConfetti copied={copied} />
+                  </div>
+                )}
               </div>
 
               <MagicButton
