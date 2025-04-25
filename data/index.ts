@@ -1,7 +1,10 @@
+import Hero from "@/components/Hero";
+import { Sphere } from "@react-three/drei";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -38,7 +41,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title:
+      "Tech enthusiast with a passion for development and Data Engineering.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -49,7 +53,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently working on Data Engineering Project",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -72,146 +76,102 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Full-Stack Flashcard Web Application",
+    des: "Collaborate with team of 4 to create a flashcard web application containerized using Docker. Utilized Github Action for CI. Practicing Agile methodology for the software engineering process. Creating Tests using Jest to test both functionalities and UI, and using Postman to test APIs. Implement the flashcard app like Quizle",
+    img: "/flashcard.png",
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/dock.svg",
+      "/nodejs.svg",
+      "/express.svg",
+      "/mongodb.svg",
+    ],
+    link: "https://www.dropbox.com/scl/fi/gloubcfhi6924uerce7y5/COSC310-project-jpbns.mp4?rlkey=fff6j79eh433lxkz2b7f8g7d0&st=g5rq2b6y&dl=0",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "ML Food Waste Management Recognition",
+    des: "Collaborated in a team of 5 members to create an image detection software for a pantry management application to reduce food wasted by notifying users of items expirations. And we are trying to give out recipes for those near-expired food using Roboflow and Yolo v8. Using HTML5, CSS3, and Bootstrap 4 for front-end. Built the backend using Python, implemented a structured SQLite database for inventory management, and connected the front-end and back-end using Flask. Attained an accuracy of 80% for item recognition in real time using ML and built a REST API for data manipulation.",
+    img: "/ml-waste.png",
+    iconLists: [
+      "/html.svg",
+      "/css.svg",
+      "/bootstrap.svg",
+      "/python.svg",
+      "/flask.svg",
+    ],
+    link: "https://devpost.com/software/pantry_sidekick",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Full-Stack Sneaker E-commerce Web App",
+    des: "An e-commerce application that enables both shopping and administrative functions online. Customers can browse, review, and purchase products, while administrators can manage inventory and sales data. Deployed on Heroku with Docker Image. Auto Deployment whenever main branch updated. Achieve Database Web Development Award for being the top web dev project (minimum 90% score)",
+    img: "/304.png",
+    iconLists: [
+      "/html.svg",
+      "/css.svg",
+      "/js.svg",
+      "/mysql.svg",
+      "/nodejs.svg",
+    ],
+    link: "https://docs.google.com/document/d/1no1-ON6vnDkrIJMDnQANWzKcdUVZYkYyTeE8BzDpHl8/edit?usp=sharing",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    title: "Sphere Platformer Game",
+    des: "Create a simple game using UNITY and C# with built-in physical logic",
+    img: "/unity-game.png",
+    iconLists: ["/c-sharp.svg", "unity.svg"],
+    link: "https://github.com/billvo2212/SpherePlatformerGame.git",
   },
 ];
 
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Summer Student Software Developer @ UBCO",
+    desc: "Utilized Typescript to collaborate with a Professor on developing web application that aids student in planning their degree",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Software Engineer Intern @ WhiteSpace Inc.",
+    desc: "Worked on a team to develop a web application using React and Node.js, enhancing user experience and performance. Training OCR using PaddleOCR to improve accuracy.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
+  // {
+  //   id: 3,
+  //   title: "Freelance App Dev Project",
+  //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "/exp3.svg",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Lead Frontend Developer",
+  //   desc: "Developed and maintained user-facing features using modern frontend technologies.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "/exp4.svg",
+  // },
 ];
 
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    href: "https://github.com/billvo2212",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/linkedin.svg",
+    href: "https://www.linkedin.com/in/bill-vo-867251296/",
   },
-  {
-    id: 3,
-    img: "/link.svg",
-  },
+  // {
+  //   id: 3,
+  //   img: "/link.svg",
+  // },
 ];
